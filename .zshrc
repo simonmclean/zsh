@@ -110,4 +110,4 @@ fi
 alias sauce="source ~/.zshrc"
 
 # Source custom plugins
-source /Users/simonmclean/zsh-syntax-highlighting/zsh-syntax-highlighting.zsh
+source ~/zsh-syntax-highlighting/zsh-syntax-highlighting.zsh
