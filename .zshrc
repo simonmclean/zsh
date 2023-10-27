@@ -106,8 +106,10 @@ fi
 # users are encouraged to define aliases within the ZSH_CUSTOM folder.
 # For a full list of active aliases, run `alias`.
 #
-# Example aliases
+
 alias sauce="source ~/.zshrc"
+alias z="nvim ~/.config/zsh/.zshrc"
+alias s="spotify"
 
 # Source custom plugins
 source ~/zsh-syntax-highlighting/zsh-syntax-highlighting.zsh
