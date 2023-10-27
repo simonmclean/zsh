@@ -108,7 +108,7 @@ fi
 #
 
 alias sauce="source ~/.zshrc"
-alias z="nvim ~/.config/zsh/.zshrc"
+alias z="nvim ~/.config/zsh/zsh-config"
 alias s="spotify"
 
 # Source custom plugins
