@@ -78,9 +78,22 @@ plugins=(
   macos
   colored-man-pages
   colorize
-  vi-mode
+  # vi-mode
   zsh-history-substring-search
 )
+
+# Custom plugins should be declared in both the plugins and custom_plugins lists
+custom_plugins=(
+  "zsh-autosuggestions"
+  "zsh-history-substring-search"
+)
+
+for name in $custom_plugins; do
+  custom_plugins_dir="${ZSH_CUSTOM:-~/.oh-my-zsh/custom}/plugins"
+  if [ ! -d "${custom_plugins_dir}/$name" ]; then
+    git clone https://github.com/zsh-users/$name ${custom_plugins_dir}/$name
+  fi
+done
 
 source $ZSH/oh-my-zsh.sh
 
@@ -105,11 +118,7 @@ fi
 # plugins, and themes. Aliases can be placed here, though oh-my-zsh
 # users are encouraged to define aliases within the ZSH_CUSTOM folder.
 # For a full list of active aliases, run `alias`.
-#
 
 alias sauce="source ~/.zshrc"
 alias z="nvim ~/.config/zsh/zsh-config"
 alias s="spotify"
-
-# Source custom plugins
-source ~/zsh-syntax-highlighting/zsh-syntax-highlighting.zsh
