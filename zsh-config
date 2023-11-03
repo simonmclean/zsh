@@ -89,9 +89,11 @@ custom_plugins=(
 )
 
 for name in $custom_plugins; do
-  plugin_dir="$ZSH_CUSTOM/plugins/$name"
-  if [ ! -d $plugin_dir ]; then
-    git clone https://github.com/zsh-users/$name $plugin_dir
+  if [ $ZSH_CUSTOM ]; then
+    plugin_dir="$ZSH_CUSTOM/plugins/$name"
+    if [ ! -d $plugin_dir ]; then
+      git clone https://github.com/zsh-users/$name $plugin_dir
+    fi
   fi
 done
 
