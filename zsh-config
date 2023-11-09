@@ -89,7 +89,7 @@ custom_plugins=(
 )
 
 for name in $custom_plugins; do
-  if [ $ZSH_CUSTOM ]; then
+  if [ $ZSH_CUSTOM ]; then # For some reason this sometimes isn't definied
     plugin_dir="$ZSH_CUSTOM/plugins/$name"
     if [ ! -d $plugin_dir ]; then
       git clone https://github.com/zsh-users/$name $plugin_dir
@@ -124,3 +124,6 @@ fi
 alias sauce="source ~/.zshrc"
 alias z="nvim ~/.config/zsh/zsh-config"
 alias s="spotify"
+alias n="nvim"
+alias k="kubectl"
+alias tf="terraform"
