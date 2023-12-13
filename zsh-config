@@ -78,7 +78,7 @@ plugins=(
   macos
   colored-man-pages
   colorize
-  # vi-mode
+  kubectx
   zsh-history-substring-search
 )
 
@@ -98,6 +98,8 @@ for name in $custom_plugins; do
 done
 
 source $ZSH/oh-my-zsh.sh
+
+PROMPT+='%{$fg_bold[blue]k8s:(%{$fg_bold[red]$(kubectx_prompt_info)%}%{$fg_bold[blue]) '
 
 # User configuration
 
